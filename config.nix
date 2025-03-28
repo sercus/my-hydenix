@@ -1,15 +1,15 @@
 {
-  username = "hydenix";
-  gitUser = "hydenix";
-  gitEmail = "exampleEmail";
-  host = "hydenix";
+  username = "ser";
+  gitUser = "sercus";
+  gitEmail = "sercusWO@gmail.com";
+  host = "bebop";
   /*
     Default password is required for sudo support in systems
     !REMEMBER TO USE passwd TO CHANGE THE PASSWORD!
   */
-  defaultPassword = "hydenix";
-  timezone = "America/Vancouver";
-  locale = "en_CA.UTF-8";
+  defaultPassword = "root";
+  timezone = "Europe/Brussels";
+  locale = "en_US.UTF-8";
 
   # hardware config - sudo nixos-generate-config --show-hardware-config > hardware-configuration.nix
   hardwareConfig = (toString ./hardware-configuration.nix);
@@ -18,7 +18,7 @@
   drivers = [
     "amdgpu"
     "intel"
-    # "nvidia"
+    "nvidia"
     # "amdcpu"
     # "intel-old"
   ];
@@ -40,6 +40,7 @@
   */
   # List of nix modules to import in ./hosts/nixos/default.nix
   nixModules = [
+    (toString ./my-packages.nix)
     # (toString ./my-module.nix)
     # in my-module.nix you can reference this userConfig
     # ({ userConfig, userPkgs, pkgs, ... }: {
@@ -48,7 +49,7 @@
   ];
   # List of nix modules to import in ./lib/mkConfig.nix
   homeModules = [
-    # (toString ./my-module.nix)
+     (toString ./my-module.nix)
   ];
 
   hyde = rec {
@@ -56,13 +57,13 @@
 
     enable = true;
 
-    # wallbash config, sets extensions as active
+     # wallbash config, sets extensions as active
     wallbash = {
       vscode = true;
     };
 
     # active theme, must be in themes list
-    activeTheme = "Catppuccin Mocha";
+    activeTheme = "Nordic Blue";
 
     # list of themes to choose from
     themes = [

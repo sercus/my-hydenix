@@ -1,6 +1,7 @@
 {
   pkgs,
   userConfig,
+  inputs,
   ...
 }:
 let
@@ -15,6 +16,8 @@ in
   imports = [
     userConfig.hardwareConfig
     ./drivers.nix
+
+
   ];
 
   # ===== Boot Configuration =====
@@ -161,6 +164,7 @@ in
       "wheel"
       "networkmanager"
       "video"
+      "docker"
     ];
     initialPassword = userConfig.defaultPassword;
   };
@@ -195,6 +199,10 @@ in
     enableSSHSupport = true;
   };
   programs.zsh.enable = true;
+
+  virtualisation.docker.enable = true;
+
+  console.keyMap = "es";
 
   # ===== System Version =====
   system.stateVersion = "24.11"; # Don't change this
