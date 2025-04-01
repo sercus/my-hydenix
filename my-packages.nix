@@ -17,6 +17,7 @@
     yarn
     wineWowPackages.waylandFull
     rPackages.telegram
+    virtualbox
   ];
 }
 
