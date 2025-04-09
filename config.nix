@@ -41,7 +41,7 @@
   # List of nix modules to import in ./hosts/nixos/default.nix
   nixModules = [
     (import ./my-packages.nix)
-    (import ./personalConfig.nix)
+    (import ./personalSystem.nix)
     # (toString ./my-module.nix)
     # in my-module.nix you can reference this userConfig
     # ({ userConfig, userPkgs, pkgs, ... }: {
@@ -51,7 +51,7 @@
   # List of nix modules to import in ./lib/mkConfig.nix
   homeModules = [
     (import ./my-packages.nix)
-    (import ./personalConfig.nix)
+    (import ./personalHome.nix)
   ];
 
   hyde = rec {
