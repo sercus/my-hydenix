@@ -202,7 +202,7 @@ in
 
   virtualisation.docker.enable = true;
 
-  console.keyMap = "es";
+  # console.keyMap = "es";
 
   # ===== System Version =====
   system.stateVersion = "24.11"; # Don't change this

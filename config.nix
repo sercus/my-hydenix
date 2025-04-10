@@ -1,3 +1,5 @@
+{ pkgs }:
+
 {
   username = "ser";
   gitUser = "sercus";
@@ -50,7 +52,7 @@
   ];
   # List of nix modules to import in ./lib/mkConfig.nix
   homeModules = [
-    (import ./my-packages.nix)
+   # (import ./my-packages.nix)
     (import ./personalHome.nix)
   ];
 

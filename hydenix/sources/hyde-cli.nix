@@ -82,6 +82,7 @@ let
         # Install Hyde, Hyde-install, and Hyde-tool
         install -m 755 Hyde $out/bin/Hyde
         install -m 755 Hyde-install $out/bin/Hyde-install
+	echo -e 'echo "input {\n  kb_layout = es\n}" > $HOME/.config/hypr/userprefs.conf' >> $out/bin/Hyde-install
         install -m 755 Hyde-tool $out/bin/Hyde-tool
 
         # Create necessary directories

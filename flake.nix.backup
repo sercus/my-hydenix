@@ -29,8 +29,6 @@
         config.allowUnfree = true;
       };
 
-      userConfig = import ./config.nix {inherit pkgs; };
-
       mkConfig = import ./lib/mkConfig.nix {
         inherit
           inputs
@@ -40,7 +38,7 @@
       };
 
       defaultConfig = mkConfig {
-        inherit userConfig;
+        userConfig = import ./config.nix;
         extraInputs = { };
       };
     in

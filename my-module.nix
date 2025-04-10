@@ -2,10 +2,10 @@
 {pkgs, ... }:
 
 {
-   wayland.windowManager.hyprland.settings = {
-   input = {
-      kb_layout = "es"; # spanish layout
-   };
-  };
+#   wayland.windowManager.hyprland.settings = {
+#   input = {
+#      kb_layout = "es"; # spanish layout
+#  };
+#  };
 }
 
